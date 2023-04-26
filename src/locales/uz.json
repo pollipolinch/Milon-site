@@ -284,7 +284,9 @@
         "month-one": "yanvar ",
         "month-two": "may ",
         "month-three": "iyun ",
-        "month-four": "noyabr "
+        "month-four": "noyabr ",
+        "month-six": "mart ",
+        "month-seven":"aprel "
     },
     "pluses-gym": {
         "title": "Kontseptsiyaning afzalligi 35'",

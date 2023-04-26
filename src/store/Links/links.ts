@@ -11,7 +11,7 @@ export const useLinksStore = defineStore("links", {
       {
         path: "/about",
         name: "35MILON",
-        title: "35'S MILON",
+        title: "35' HEALTH CLUBS",
       },
       {
         path: "/price",

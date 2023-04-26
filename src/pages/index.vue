@@ -102,7 +102,7 @@
         />
         <h2 class="sistem-title">{{ $t("sistem.sistem-title") }}</h2>
         <el-row>
-          <el-col :xs="12" :sm="12" :md="8" :lg="8" :xl="8">
+          <el-col :xs="24" :sm="12" :md="8" :lg="8" :xl="8">
             <div class="sistem-container">
               <img
                 class="sistem-container-img"
@@ -145,7 +145,7 @@
               />
             </div>
           </el-col>
-          <el-col :xs="12" :sm="12" :md="8" :lg="8" :xl="8">
+          <el-col :xs="24" :sm="12" :md="8" :lg="8" :xl="8">
             <div class="sistem-container">
               <img
                 class="sistem-container-img"
@@ -187,7 +187,7 @@
               />
             </div>
           </el-col>
-          <el-col :xs="12" :sm="12" :md="8" :lg="8" :xl="8">
+          <el-col :xs="24" :sm="12" :md="8" :lg="8" :xl="8">
             <div class="sistem-container">
               <img
                 class="sistem-container-img"
@@ -229,7 +229,7 @@
               />
             </div>
           </el-col>
-          <el-col :xs="12" :sm="12" :md="8" :lg="8" :xl="8">
+          <el-col :xs="24" :sm="12" :md="8" :lg="8" :xl="8">
             <div class="sistem-container">
               <img
                 class="sistem-container-img"
@@ -271,7 +271,7 @@
               />
             </div>
           </el-col>
-          <el-col :xs="12" :sm="12" :md="8" :lg="8" :xl="8">
+          <el-col :xs="24" :sm="12" :md="8" :lg="8" :xl="8">
             <div class="sistem-container">
               <img
                 class="sistem-container-img"
@@ -315,7 +315,7 @@
               />
             </div>
           </el-col>
-          <el-col :xs="12" :sm="12" :md="8" :lg="8" :xl="8">
+          <el-col :xs="24" :sm="12" :md="8" :lg="8" :xl="8">
             <div class="sistem-container padding">
               <img
                 class="sistem-container-img"
@@ -466,6 +466,7 @@
           </el-col>
         </el-row>
       </section>
+      <Helper></Helper>
     </main>
   </div>
 </template>
@@ -481,6 +482,7 @@ import {
 } from "element-plus";
 import { ref } from "vue";
 import Diagnostic from "../components/Diagnostic.vue"
+import Helper from "../components/Helper.vue"
 useHead({
   titleTemplate: "Milon - Тренажерный зал",
   meta: [
@@ -499,13 +501,13 @@ let sistemContainer = ref([
   { id: 5, vis: false },
 ]);
 function visibleContainer(ell) {
-  for (let i = 0; i < this.sistemContainer.length; i++) {
-    this.sistemContainer[i].vis = false;
+  for (let i = 0; i < sistemContainer.value.length; i++) {
+    sistemContainer.value[i].vis = false;
   }
-  this.sistemContainer[ell].vis = true;
+  sistemContainer.value[ell].vis = true;
 }
 function notVisibleContainer(ell) {
-  this.sistemContainer[ell].vis = false;
+  sistemContainer.value[ell].vis = false;
 }
 </script>
 <style>
@@ -523,6 +525,11 @@ function notVisibleContainer(ell) {
   width: 20%;
   right: 0px;
   top: 200px;
+}
+@media (max-width: 700px) {
+  .el-collapse-item__arrow{
+    margin-left:20px!important;
+  }
 }
 .lozung-color-one {
   font-size: 70px;
@@ -642,7 +649,7 @@ function notVisibleContainer(ell) {
 .sistem-title {
   text-transform: uppercase;
   color: black;
-  padding-top: 50px;
+  padding-top: 20px;
   margin: auto;
   text-align: center;
   font-size: 24px;
@@ -815,6 +822,12 @@ function notVisibleContainer(ell) {
   .lozung-color-three {
     margin-left: 35%;
   }
+  .lozung-paragraph{
+    margin-left: 35%;
+  }
+  .lozung-button{
+    margin-left: 35%;
+  }
   .why-we-item {
     width: 50%;
   }
@@ -939,19 +952,6 @@ function notVisibleContainer(ell) {
   }
 }
 @media screen and (max-width: 768px) {
-  .guarantee-img {
-    width: 40%;
-    margin: auto;
-    margin-bottom: 40px;
-  }
-  .guarantee-text {
-    font-size: 14px;
-    text-align: center;
-    width: 90%;
-    display: block;
-    margin: auto;
-    margin-bottom: 30px;
-  }
 
   .why-we-item {
     font-size: 14px;
@@ -981,22 +981,59 @@ function notVisibleContainer(ell) {
     align-items: center;
   }
 }
-@media screen and (max-width: 650px) {
-  .active-two {
-    left: 46%;
+@media screen and (max-width: 767px) {
+  .guarantee-img {
+    width: 40%;
+    margin: auto;
+    margin-bottom: 40px;
   }
-  .active-three {
-    right: 44%;
+  .guarantee-text {
+    font-size: 14px;
+    text-align: center;
+    width: 90%;
+    display: block;
+    margin: auto;
+    margin-bottom: 30px;
   }
-  .active-four {
-    left: 46%;
+
+  .active-one{
+    margin: auto;
+    left: 0;
+    right: 0;
   }
-  .active-five {
-    left: 6%;
+  .active-two{
+    margin: auto;
+    margin-top: 350px;
+    left: 0;
+    right: 0;
+  }
+  .active-three{
+    margin: auto;
+    margin-top: 350px;
+    left: 0;
+    right: 0;
+  }
+  .active-four{
+    margin: auto;
+    margin-top: 700px;
+    left: 0;
+    right: 0;
+  }
+  .active-five{
+    margin: auto;
+    margin-top: 750px;
+    left: 0;
+    right: 0;
   }
   .active-six{
-    left: 46%;
+    margin: auto;
+    margin-top: 1050px;
+    left: 0;
+    right: 0;
   }
+}
+@media screen and (max-width: 650px) {
+ 
   .sistem-container-img-active {
     width: 130px;
   }
@@ -1034,6 +1071,9 @@ function notVisibleContainer(ell) {
   }
 }
 @media screen and (max-width: 500px) {
+  .difference-title{
+    font-size: 20px;
+  }
   .difference-video {
     width: 70%;
    height: 300px;
@@ -1043,9 +1083,8 @@ function notVisibleContainer(ell) {
     width: 250px;
     height: 430px;
   }
-  .active-five {
-    top: 680px;
-    left: 8%;
+  .padding{
+    padding-bottom: 80px;
   }
   .lozung-color-one {
     font-size: 30px;
@@ -1066,5 +1105,34 @@ function notVisibleContainer(ell) {
     margin-top: 30px;
   }
 }
+@media screen and (max-width: 440px) {
+  .guarantee-text{
+margin-top: 150px;
+  }
+  .lozung-paragraph{
+    font-size: 12px;
+    width: 70%;
+  }
+  .lozung-button{
+   width: 200px;
+   margin-left: 55%;
+  }
+}
+@media screen and (max-width: 390px) {
+  .lozung-button{
+   margin-left: 40%;
+  }
+  .guarantee-img{
+    width: 60%;
+  }
+  .el-collapse-item__header{
+    margin-left: -10%;
+  }
+  .el-collapse-item__content{
+    width: 100%;
+    text-align: justify;
+  }
+}
+
 </style>
 

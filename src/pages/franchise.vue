@@ -244,8 +244,18 @@
         </el-row>
       </section>
       <section class="picture-krug">
-        <img v-if="locale.currentLocaleHandler.value=='ru'" class="picture-krug-img" src="../assets/img/krug.png" alt="" />
-        <img v-if="locale.currentLocaleHandler.value=='uz'" class="picture-krug-img" src="../assets/img/krug_uz.png" alt="" />
+        <img
+          v-if="locale.currentLocaleHandler.value == 'ru'"
+          class="picture-krug-img"
+          src="../assets/img/krug.png"
+          alt=""
+        />
+        <img
+          v-if="locale.currentLocaleHandler.value == 'uz'"
+          class="picture-krug-img"
+          src="../assets/img/krug_uz.png"
+          alt=""
+        />
       </section>
       <section class="rehabilitation">
         <img
@@ -376,13 +386,9 @@
           <span class="vs-title-color"> {{ $t("main-secret.title-two") }}</span>
           {{ $t("clubs-in-city.title") }}
         </h3>
-        <img
-          class="clubs-in-city-img"
-          src="../assets/img/clubs_tashkent.png"
-          alt=""
-        />
         <div class="clubs-in-city-container">
           <div class="clubs-in-city-container-mini">
+            <img class="clubs-img" src="../assets/img/club-1.png" alt="" />
             <h3 class="clubs-in-city-container-number">01</h3>
             <h3 class="clubs-in-city-container-month">
               {{ $t("clubs-in-city.month-one") }}2022
@@ -390,6 +396,7 @@
             <p class="clubs-in-city-container-adress">35'<br />Oltintepa</p>
           </div>
           <div class="clubs-in-city-container-mini">
+            <img class="clubs-img" src="../assets/img/club-2.png" alt="" />
             <h3 class="clubs-in-city-container-number">02</h3>
             <h3 class="clubs-in-city-container-month">
               {{ $t("clubs-in-city.month-two") }}2022
@@ -397,6 +404,7 @@
             <p class="clubs-in-city-container-adress">35'<br />Bodomzor</p>
           </div>
           <div class="clubs-in-city-container-mini">
+            <img class="clubs-img" src="../assets/img/club-3.png" alt="" />
             <h3 class="clubs-in-city-container-number">03</h3>
             <h3 class="clubs-in-city-container-month">
               {{ $t("clubs-in-city.month-three") }}2022
@@ -404,18 +412,36 @@
             <p class="clubs-in-city-container-adress">35'<br />Chilonzor</p>
           </div>
           <div class="clubs-in-city-container-mini">
-            <h3 class="clubs-in-city-container-number">05</h3>
+            <img class="clubs-img" src="../assets/img/club-4.png" alt="" />
+            <h3 class="clubs-in-city-container-number">04</h3>
             <h3 class="clubs-in-city-container-month">
               {{ $t("clubs-in-city.month-four") }}2022
             </h3>
             <p class="clubs-in-city-container-adress">35'<br />Rakat</p>
           </div>
           <div class="clubs-in-city-container-mini">
-            <h3 class="clubs-in-city-container-number">01</h3>
+            <img class="clubs-img" src="../assets/img/club-5.png" alt="" />
+            <h3 class="clubs-in-city-container-number">05</h3>
             <h3 class="clubs-in-city-container-month">
               {{ $t("clubs-in-city.month-four") }}2022
             </h3>
-            <p class="clubs-in-city-container-adress">35'<br />...</p>
+            <p class="clubs-in-city-container-adress">35'<br />Qorasaroy</p>
+          </div>
+          <div class="clubs-in-city-container-mini">
+            <img class="clubs-img" src="../assets/img/club-6.png" alt="" />
+            <h3 class="clubs-in-city-container-number">06</h3>
+            <h3 class="clubs-in-city-container-month">
+              {{ $t("clubs-in-city.month-six") }}2023
+            </h3>
+            <p class="clubs-in-city-container-adress">35'<br />Qorasuv</p>
+          </div>
+          <div class="clubs-in-city-container-mini">
+            <img class="clubs-img" src="../assets/img/club-7.png" alt="" />
+            <h3 class="clubs-in-city-container-number">07</h3>
+            <h3 class="clubs-in-city-container-month">
+              {{ $t("clubs-in-city.month-seven") }}2023
+            </h3>
+            <p class="clubs-in-city-container-adress">35'<br />Qoratosh</p>
           </div>
         </div>
       </section>
@@ -774,12 +800,14 @@
             <img class="our-help-img" src="../assets/img/photo5.png" alt=""
           /></el-col>
         </el-row>
-        <img v-if="locale.currentLocaleHandler.value=='ru'"
+        <img
+          v-if="locale.currentLocaleHandler.value == 'ru'"
           class="marketing-support-img"
           src="../assets/img/marketing_krug.png"
           alt=""
         />
-        <img v-if="locale.currentLocaleHandler.value=='uz'"
+        <img
+          v-if="locale.currentLocaleHandler.value == 'uz'"
           class="marketing-support-img"
           src="../assets/img/marketing_360_uz.png"
           alt=""
@@ -862,15 +890,29 @@
 <script setup>
 import { ElRow, ElCol, ElCollapse, ElCollapseItem } from "element-plus";
 import { useLocaleStore } from "~/store/Locale/index";
-const locale = useLocaleStore()
+const locale = useLocaleStore();
 useHead({
   titleTemplate: "Франшиза клуба",
   meta: [
-    { name: "система умных тренировок", content: "инновационный подход к организации тренировок и уникальное оборудование" },
-    { name: "Milon Care", content: "это облако, хранящее данные всех участников, автоматически сохраняющая все нагрузки, результаты и прогресс" },
-    { name: "Поддержка франчайзи", content: "Полное сопровождение процесса продаж" },
-    { name: "Маркетинг", content: "охват широкой аудитории при помощи цифровых технологий" },
-  ]
+    {
+      name: "система умных тренировок",
+      content:
+        "инновационный подход к организации тренировок и уникальное оборудование",
+    },
+    {
+      name: "Milon Care",
+      content:
+        "это облако, хранящее данные всех участников, автоматически сохраняющая все нагрузки, результаты и прогресс",
+    },
+    {
+      name: "Поддержка франчайзи",
+      content: "Полное сопровождение процесса продаж",
+    },
+    {
+      name: "Маркетинг",
+      content: "охват широкой аудитории при помощи цифровых технологий",
+    },
+  ],
 });
 </script>
 <style>
@@ -1305,17 +1347,13 @@ useHead({
 .clubs-in-city {
   background: #eff1f2;
 }
-.clubs-in-city-img {
-  width: 70%;
-  display: block;
-  margin: auto;
-  margin-top: 50px;
-}
+
 .clubs-in-city-container {
   display: flex;
   justify-content: center;
   width: 100%;
   margin: auto;
+  flex-wrap: wrap;
 }
 .clubs-in-city-container-number {
   font-size: 60px;
@@ -1337,9 +1375,13 @@ useHead({
   text-transform: uppercase;
 }
 .clubs-in-city-container-mini {
+  margin-top: 50px;
   margin-left: 3%;
   margin-right: 3%;
   padding-bottom: 70px;
+}
+.clubs-img{
+  width: 170px;
 }
 .pluses-gym {
   position: relative;
@@ -1645,14 +1687,12 @@ useHead({
     font-size: 15px;
     line-height: 25px;
   }
-  .gym-title{
+  .gym-title {
     margin-left: 38.6%;
   }
-
-  
 }
 @media screen and (max-width: 1200px) {
-  .gym-title{
+  .gym-title {
     margin-left: 39.6%;
   }
   .gym-item-one {
@@ -1690,10 +1730,10 @@ useHead({
   }
 }
 @media screen and (max-width: 1100px) {
-  .gym-title{
-   font-size: 18px;
+  .gym-title {
+    font-size: 18px;
   }
-  .gym-title-classic{
+  .gym-title-classic {
     font-size: 18px;
   }
   .gym-number-seven {
@@ -1744,7 +1784,7 @@ useHead({
     justify-content: left;
     padding-left: 20px;
   }
-  .gym-title-classic{
+  .gym-title-classic {
     font-size: 15px;
     width: 70%;
   }
@@ -1844,11 +1884,11 @@ useHead({
   .clubs-in-city-container-adress {
     font-size: 14px;
   }
-  .gym-title{
+  .gym-title {
     margin-left: 41%;
     font-size: 14px;
   }
-  .gym-title-classic{
+  .gym-title-classic {
     font-size: 14px;
   }
   .gym-item-one {
@@ -1955,7 +1995,7 @@ useHead({
   .our-help-li {
     margin-left: 30%;
   }
-  .gym-title{
+  .gym-title {
     margin-left: 42%;
     padding-left: 5px;
   }
@@ -1982,7 +2022,7 @@ useHead({
   .vs-text {
     line-height: 18px;
   }
-  .gym-title{
+  .gym-title {
     font-size: 13px;
     margin-left: 43%;
     padding-left: 0px;
@@ -2042,7 +2082,9 @@ useHead({
   .teh-support-li {
     font-size: 13px;
   }
-
+  .food-text-color {
+    width: 50%;
+  }
   .franshiza-about-title-secret {
     font-size: 20px;
   }
@@ -2193,7 +2235,179 @@ useHead({
     width: 50%;
   }
 }
-.test {
-  color: #279893;
+@media screen and (max-width: 500px) {
+  .about-premises {
+    margin-top: 30px;
+    background: #279893;
+  }
+  .about-premises-title {
+    padding-top: 40px;
+  }
+  .club-inside {
+    background: #279893;
+  }
+  .club-inside-title {
+    padding-top: 40px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .about-premises-img {
+    display: none;
+  }
+}
+@media screen and (max-width: 450px) {
+  .marketing-support-container {
+    align-items: center;
+  }
+  .marketing-sup-bullet {
+    height: 70px;
+  }
+  .marketing-sup-text {
+    width: 50%;
+    font-size: 12px;
+  }
+  .gym-item-one {
+    height: 65px;
+  }
+  .gym-number-one {
+    height: 61px;
+  }
+  .gym-item-two {
+    height: 80px;
+  }
+  .gym-number-two {
+    height: 76px;
+  }
+  .gym-item-four {
+    height: 100px;
+  }
+  .gym-number-four {
+    height: 96px;
+  }
+  .gym-item-seven {
+    height: 170px;
+  }
+  .gym-number-seven {
+    height: 166px;
+  }
+  .pluses-gym-back {
+    width: 320px;
+  }
+  .eleven-steps-img {
+    padding-top: 180px;
+  }
+
+  .teh-support-img {
+    width: 35%;
+    margin-top: 30px;
+  }
+  .our-help-li {
+    margin-left: 10%;
+  }
+  .marketing-support-img {
+    width: 95%;
+  }
+  .crm-sistem-img {
+    width: 95%;
+  }
+  .about-premises-table-title {
+    font-size: 14px;
+  }
+  .about-premises-table-lift-li {
+    margin-left: 20%;
+  }
+  .crm-sistem-text {
+    width: 80%;
+    text-align: justify;
+  }
+  .club-inside-container-img {
+    width: 2%;
+    height: 50px;
+  }
+  .vs-text {
+    font-size: 12px;
+    text-align: justify;
+  }
+  .vs-text-color {
+    font-size: 14px;
+  }
+  .main-secret-text {
+    font-size: 13px;
+  }
+  .main-secret-text-down {
+    font-size: 13px;
+  }
+  .club-inside-container-text-bold {
+    font-size: 11px;
+  }
+  .club-inside-container-text {
+    font-size: 11px;
+  }
+  .rehabilitation-title-color {
+    width: 100%;
+  }
+  .pad {
+    padding-bottom: 10px;
+  }
+  .teh-support-li {
+    margin-left: 2%;
+  }
+  .teh-support-container-title {
+    margin-left: 2%;
+    padding-bottom: 10px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .club-inside-container-text-bold {
+    line-height: 10px;
+    width: 85%;
+  }
+  .gym-title {
+    margin-left: 30%;
+  }
+  .gym-item-one {
+    height: 95px;
+  }
+  .gym-number-one {
+    height: 91px;
+  }
+  .gym-item-two {
+    height: 120px;
+  }
+  .gym-number-two {
+    height: 116px;
+  }
+  .gym-item-four {
+    height: 150px;
+  }
+  .gym-number-four {
+    height: 146px;
+  }
+  .gym-item-seven {
+    height: 240px;
+  }
+  .gym-number-seven {
+    height: 236px;
+  }
+  .eleven-steps-img {
+    padding-top: 380px;
+  }
+  .eleven-steps-title {
+    padding-top: 0px;
+  }
+  .about-premises-table-title {
+    font-size: 12px;
+  }
+  .food-text-color {
+    padding-top: 40px;
+  }
+  .food-img {
+    width: 50%;
+    margin-top: 20px;
+    margin-left: 40%;
+  }
+  .food-text {
+    font-size: 11px;
+  }
 }
 </style>

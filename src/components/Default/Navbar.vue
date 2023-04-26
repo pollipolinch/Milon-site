@@ -15,7 +15,11 @@
             <span class="bar"></span>
           </div>
           <div class="nav-logo">
-            <img src="../../assets/img/logo_head.png" alt="логотип" />
+            <NuxtLink
+            :to="links[0].path">
+              <img src="../../assets/img/logo_head.png" alt="логотип" />
+            </NuxtLink>
+           
           </div>
           <div class="menu" id="menu">
             <ul class="menu-inner">
@@ -33,17 +37,17 @@
           <div class="nav-icons">
             <div class="nav-icon">
               <a target="_blank" href="https://www.facebook.com/milonuz/"
-                ><img src="../../assets/img/fb_icon.png" alt=""
+                ><img src="../../assets/img/fb.png" alt=""
               /></a>
             </div>
             <div class="nav-icon">
               <a target="_blank" href="https://t.me/milonuz2022"
-                ><img src="../../assets/img/telegram_icon.png" alt=""
+                ><img src="../../assets/img/tg.png" alt=""
               /></a>
             </div>
             <div class="nav-icon">
               <a target="_blank" href="https://www.instagram.com/milon_uz/"
-                ><img src="../../assets/img/insta_icon.png" alt=""
+                ><img src="../../assets/img/inst.png" alt=""
               /></a>
             </div>
            <button v-if="locale.currentLocaleHandler.value=='ru'" @click="changeLanguage('uz')" class="select-lang">{{ locale.currentLocaleHandler.label }}</button>

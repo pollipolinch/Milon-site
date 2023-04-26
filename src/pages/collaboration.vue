@@ -327,9 +327,9 @@
             <h5 class="buy-abonement-container-sale">
               {{ $t("buy-abonement.sale-one") }}
             </h5>
-            <button class="buy-abonement-container-button">
+            <a href="#buy"> <button class="buy-abonement-container-button">
               {{ $t("buy-abonement.buy") }}
-            </button>
+            </button></a>
           </div>
           <div class="buy-abonement-container-back">
             <h3 class="buy-abonement-container-number-text">
@@ -341,9 +341,9 @@
             <h5 class="buy-abonement-container-sale">
               {{ $t("buy-abonement.sale-two") }}
             </h5>
-            <button class="buy-abonement-container-button">
+            <a href="#buy"> <button class="buy-abonement-container-button">
               {{ $t("buy-abonement.buy") }}
-            </button>
+            </button></a>
           </div>
           <div class="buy-abonement-container-back">
             <h3 class="buy-abonement-container-number-text">
@@ -355,9 +355,9 @@
             <h5 class="buy-abonement-container-sale">
               {{ $t("buy-abonement.sale-three") }}
             </h5>
-            <button class="buy-abonement-container-button">
+            <a href="#buy"> <button class="buy-abonement-container-button">
               {{ $t("buy-abonement.buy") }}
-            </button>
+            </button></a>
           </div>
           <div class="buy-abonement-container-back">
             <h3 class="buy-abonement-container-number-text">
@@ -369,9 +369,9 @@
             <h5 class="buy-abonement-container-sale">
               {{ $t("buy-abonement.sale-four") }}
             </h5>
-            <button class="buy-abonement-container-button">
+            <a href="#buy"> <button class="buy-abonement-container-button">
               {{ $t("buy-abonement.buy") }}
-            </button>
+            </button></a>
           </div>
           <div class="buy-abonement-container-back">
             <h3 class="buy-abonement-container-number-text">
@@ -383,16 +383,16 @@
             <h5 class="buy-abonement-container-sale">
               {{ $t("buy-abonement.sale-five") }}
             </h5>
-            <button class="buy-abonement-container-button">
+            <a href="#buy"> <button class="buy-abonement-container-button">
               {{ $t("buy-abonement.buy") }}
-            </button>
+            </button></a>
           </div>
         </div>
         <p class="buy-abonement-text-down">
           {{ $t("buy-abonement.text-two") }}
         </p>
       </section>
-      <section class="choose-abonement">
+      <section class="choose-abonement" id="buy">
         <h3 class="cooperation-why-title">
           {{ $t("choose-abonement.title") }}
         </h3>
@@ -653,8 +653,8 @@
         </h5>
         <p class="choose-abonement-question-text">
           {{ $t("choose-abonement.text") }}
-          <span class="choose-abonement-question-number"
-            >+998 90 983 90 00</span
+          <a class="choose-abonement-question-number" href="tel:+998909839000"
+                    >+998 90 983 90 00</a
           >
         </p>
       </section>
@@ -1090,9 +1090,6 @@ const locale = useLocaleStore()
   }
 }
 @media screen and (max-width: 992px) {
-  .advantages-table-discription {
-    font-size: 10px;
-  }
   .cooperation-title{
     width: 70%;
   }
@@ -1125,6 +1122,9 @@ const locale = useLocaleStore()
   }
 }
 @media screen and (max-width: 780px) {
+  .choose-abonement-container {
+  justify-content: space-around;
+}
   .choose-abonement-container-text{
     font-size: 10px;
   }
@@ -1158,6 +1158,8 @@ const locale = useLocaleStore()
     margin-top: 15px;
   }
   .cooperation-why-container-title{
+    margin: auto;
+    margin-top: 15px;
     text-align: center;
     font-size: 18px;
   }
@@ -1165,6 +1167,7 @@ const locale = useLocaleStore()
     font-size: 14px;
     margin: auto;
     margin-top: 15px;
+    text-align: justify;
   }
   .cooperation-why-container{
     padding-top: 0px;
@@ -1199,6 +1202,15 @@ const locale = useLocaleStore()
   }
  
 }
+@media screen and (max-width: 680px) {
+  .advantages-table{
+    background: #3c8f8b;
+  }
+  .advantages-table-title{
+    padding-top: 40px;
+  }
+}
+
 @media screen and (max-width: 630px) {
   .choose-abonement-container-one-title{
     font-size: 8px;
@@ -1218,7 +1230,7 @@ const locale = useLocaleStore()
 }
 @media screen and (max-width: 530px) {
   .cooperation-couple-img{
-    width: 300px;
+    width: 200px;
   }
   .cooperation-title{
     font-size: 16px;
@@ -1253,7 +1265,88 @@ const locale = useLocaleStore()
     margin-left: 7%;
   }
   .advantages-table-discription{
-    line-height: 12px;
+    font-size: 12px;
   }
 }
+@media screen and (max-width: 500px) {
+  .cooperation-photos{
+    width: 100%;
+  }
+  .cooperation-why-background{
+    height: 200px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .choose-abonement-question-text{
+    width: 70%;
+  }
+  .choose-abonement-container-cross{
+    height: 43px;
+  }
+  .choose-abonement-container-one{
+    width: 20%;
+  }
+  .choose-abonement-container-two{
+    width: 20%;
+  }
+  .choose-abonement-container-text-color{
+    width: 100%;
+    font-size: 9px;
+  }
+  .choose-abonement-container-text{
+    width: 100%;
+    font-size: 9px;
+  }
+  .choose-abonement-container-title{
+    font-size: 9px;
+  }
+  .buy-abonement-text{
+    font-size: 14px;
+  }
+  .advantages-table-container-mini{
+    margin-right: 3px;
+  }
+  .advantages-table-container{
+    margin-top: 10px;
+  }
+  .advantages-table-plus{
+    width: 30px;
+  }
+  .cooperation-advantages-block-first{
+    width: 330px;
+  }
+  .cooperation-advantages-block-second{
+    width: 330px;
+    height: 300px;
+  }
+  .cooperation-advantages-block-third{
+    width: 330px;
+    height: 300px;
+  }
+}
+@media screen and (max-width: 390px) {
+  .cooperation-why-background{
+    height: 230px;
+  }
+  .cooperation-advantages-block-first{
+    width: 250px;
+    height: 280px;
+  }
+  .cooperation-advantages-block-second{
+    width: 250px;
+    height: 340px;
+  }
+  .cooperation-advantages-block-third{
+    width: 250px;
+    height: 380px;
+  }
+  .advantages-table-container{
+    margin-left: 1%;
+  }
+  .advantages-table-discription{
+    width: 100%;
+  }
+
+}
+
 </style>

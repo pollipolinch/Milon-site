@@ -5,7 +5,7 @@
           <div class="footer-icon"><a target="_blank" href="https://t.me/milonuz2022"><img src="../../assets/img/telega_icon_white.png" alt=""></a></div>
           <div class="footer-icon"><a target="_blank" href="https://www.instagram.com/milon_uz/"><img src="../../assets/img/insta_icon_footer.png" alt=""></a></div>
         </div>
-        <p class="footer-text">2022 - MILON Health Club</p>
+        <p class="footer-text">2023 - 35' Health Clubs</p>
  </footer>
 </template>
 
@@ -32,8 +32,10 @@ import { ElRow, ElCol, ElCollapse, ElCollapseItem } from "element-plus";
   margin-right: 20px;
 }
 .footer-text{
-  color: #2e928e;
+  color: white;
   margin-left: 15%;
   margin-top:20px ;
+  font-size: 20px;
+  font-weight: 700;
 }
 </style>

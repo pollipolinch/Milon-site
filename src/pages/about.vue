@@ -105,68 +105,69 @@
           {{ $t("safety.safety-text-two") }}
         </p>
       </section>
-      <section class="our-trainers">
-        <h3 class="our-trainers-title">
-          {{ $t("our-trainers.our-trainers-title") }}
-        </h3>
-        <div class="our-trainers-container">
-          <div class="our-trainers-container-background">
-            <img
-              class="our-trainers-container-img"
-              src="https://media.istockphoto.com/id/1200677760/ru/%D1%84%D0%BE%D1%82%D0%BE/%D0%BF%D0%BE%D1%80%D1%82%D1%80%D0%B5%D1%82-%D0%BA%D1%80%D0%B0%D1%81%D0%B8%D0%B2%D0%BE%D0%B3%D0%BE-%D1%83%D0%BB%D1%8B%D0%B1%D0%B0%D1%8E%D1%89%D0%B5%D0%B3%D0%BE%D1%81%D1%8F-%D0%BC%D0%BE%D0%BB%D0%BE%D0%B4%D0%BE%D0%B3%D0%BE-%D1%87%D0%B5%D0%BB%D0%BE%D0%B2%D0%B5%D0%BA%D0%B0-%D1%81%D0%BE-%D1%81%D0%BA%D1%80%D0%B5%D1%89%D0%B5%D0%BD%D0%BD%D1%8B%D0%BC%D0%B8-%D1%80%D1%83%D0%BA%D0%B0%D0%BC%D0%B8.jpg?s=612x612&w=0&k=20&c=XAmUDQcCbmorrYBQOVADBgkzUX66S7-HSRyEzjwpxZI="
-              alt=""
-            />
-            <h4 class="our-trainers-container-title">
-              {{ $t("our-trainers.our-trainer-one") }}
-            </h4>
-            <p class="our-trainers-container-text">
-              {{ $t("our-trainers.our-trainer-description-one") }}
-            </p>
-          </div>
-          <div class="our-trainers-container-background">
-            <img
-              class="our-trainers-container-img"
-              src="https://media.istockphoto.com/id/1200677760/ru/%D1%84%D0%BE%D1%82%D0%BE/%D0%BF%D0%BE%D1%80%D1%82%D1%80%D0%B5%D1%82-%D0%BA%D1%80%D0%B0%D1%81%D0%B8%D0%B2%D0%BE%D0%B3%D0%BE-%D1%83%D0%BB%D1%8B%D0%B1%D0%B0%D1%8E%D1%89%D0%B5%D0%B3%D0%BE%D1%81%D1%8F-%D0%BC%D0%BE%D0%BB%D0%BE%D0%B4%D0%BE%D0%B3%D0%BE-%D1%87%D0%B5%D0%BB%D0%BE%D0%B2%D0%B5%D0%BA%D0%B0-%D1%81%D0%BE-%D1%81%D0%BA%D1%80%D0%B5%D1%89%D0%B5%D0%BD%D0%BD%D1%8B%D0%BC%D0%B8-%D1%80%D1%83%D0%BA%D0%B0%D0%BC%D0%B8.jpg?s=612x612&w=0&k=20&c=XAmUDQcCbmorrYBQOVADBgkzUX66S7-HSRyEzjwpxZI="
-              alt=""
-            />
-            <h4 class="our-trainers-container-title">
-              {{ $t("our-trainers.our-trainer-two") }}
-            </h4>
-            <p class="our-trainers-container-text">
-              {{ $t("our-trainers.our-trainer-description-two") }}
-            </p>
-          </div>
-          <div class="our-trainers-container-background">
-            <img
-              class="our-trainers-container-img"
-              src="https://media.istockphoto.com/id/1200677760/ru/%D1%84%D0%BE%D1%82%D0%BE/%D0%BF%D0%BE%D1%80%D1%82%D1%80%D0%B5%D1%82-%D0%BA%D1%80%D0%B0%D1%81%D0%B8%D0%B2%D0%BE%D0%B3%D0%BE-%D1%83%D0%BB%D1%8B%D0%B1%D0%B0%D1%8E%D1%89%D0%B5%D0%B3%D0%BE%D1%81%D1%8F-%D0%BC%D0%BE%D0%BB%D0%BE%D0%B4%D0%BE%D0%B3%D0%BE-%D1%87%D0%B5%D0%BB%D0%BE%D0%B2%D0%B5%D0%BA%D0%B0-%D1%81%D0%BE-%D1%81%D0%BA%D1%80%D0%B5%D1%89%D0%B5%D0%BD%D0%BD%D1%8B%D0%BC%D0%B8-%D1%80%D1%83%D0%BA%D0%B0%D0%BC%D0%B8.jpg?s=612x612&w=0&k=20&c=XAmUDQcCbmorrYBQOVADBgkzUX66S7-HSRyEzjwpxZI="
-              alt=""
-            />
-            <h4 class="our-trainers-container-title">
-              {{ $t("our-trainers.our-trainer-three") }}
-            </h4>
-            <p class="our-trainers-container-text">
-              {{ $t("our-trainers.our-trainer-description-three") }}
-            </p>
-          </div>
-          <div class="our-trainers-container-background">
-            <img
-              class="our-trainers-container-img"
-              src="https://media.istockphoto.com/id/1200677760/ru/%D1%84%D0%BE%D1%82%D0%BE/%D0%BF%D0%BE%D1%80%D1%82%D1%80%D0%B5%D1%82-%D0%BA%D1%80%D0%B0%D1%81%D0%B8%D0%B2%D0%BE%D0%B3%D0%BE-%D1%83%D0%BB%D1%8B%D0%B1%D0%B0%D1%8E%D1%89%D0%B5%D0%B3%D0%BE%D1%81%D1%8F-%D0%BC%D0%BE%D0%BB%D0%BE%D0%B4%D0%BE%D0%B3%D0%BE-%D1%87%D0%B5%D0%BB%D0%BE%D0%B2%D0%B5%D0%BA%D0%B0-%D1%81%D0%BE-%D1%81%D0%BA%D1%80%D0%B5%D1%89%D0%B5%D0%BD%D0%BD%D1%8B%D0%BC%D0%B8-%D1%80%D1%83%D0%BA%D0%B0%D0%BC%D0%B8.jpg?s=612x612&w=0&k=20&c=XAmUDQcCbmorrYBQOVADBgkzUX66S7-HSRyEzjwpxZI="
-              alt=""
-            />
-            <h4 class="our-trainers-container-title">
-              {{ $t("our-trainers.our-trainer-four") }}
-            </h4>
-            <p class="our-trainers-container-text">
-              {{ $t("our-trainers.our-trainer-description-four") }}
-            </p>
-          </div>
-        </div>
-      </section>
+<!--      <section class="our-trainers">-->
+<!--        <h3 class="our-trainers-title">-->
+<!--          {{ $t("our-trainers.our-trainers-title") }}-->
+<!--        </h3>-->
+<!--        <div class="our-trainers-container">-->
+<!--          <div class="our-trainers-container-background">-->
+<!--            <img-->
+<!--              class="our-trainers-container-img"-->
+<!--              src="https://media.istockphoto.com/id/1200677760/ru/%D1%84%D0%BE%D1%82%D0%BE/%D0%BF%D0%BE%D1%80%D1%82%D1%80%D0%B5%D1%82-%D0%BA%D1%80%D0%B0%D1%81%D0%B8%D0%B2%D0%BE%D0%B3%D0%BE-%D1%83%D0%BB%D1%8B%D0%B1%D0%B0%D1%8E%D1%89%D0%B5%D0%B3%D0%BE%D1%81%D1%8F-%D0%BC%D0%BE%D0%BB%D0%BE%D0%B4%D0%BE%D0%B3%D0%BE-%D1%87%D0%B5%D0%BB%D0%BE%D0%B2%D0%B5%D0%BA%D0%B0-%D1%81%D0%BE-%D1%81%D0%BA%D1%80%D0%B5%D1%89%D0%B5%D0%BD%D0%BD%D1%8B%D0%BC%D0%B8-%D1%80%D1%83%D0%BA%D0%B0%D0%BC%D0%B8.jpg?s=612x612&w=0&k=20&c=XAmUDQcCbmorrYBQOVADBgkzUX66S7-HSRyEzjwpxZI="-->
+<!--              alt=""-->
+<!--            />-->
+<!--            <h4 class="our-trainers-container-title">-->
+<!--              {{ $t("our-trainers.our-trainer-one") }}-->
+<!--            </h4>-->
+<!--            <p class="our-trainers-container-text">-->
+<!--              {{ $t("our-trainers.our-trainer-description-one") }}-->
+<!--            </p>-->
+<!--          </div>-->
+<!--          <div class="our-trainers-container-background">-->
+<!--            <img-->
+<!--              class="our-trainers-container-img"-->
+<!--              src="https://media.istockphoto.com/id/1200677760/ru/%D1%84%D0%BE%D1%82%D0%BE/%D0%BF%D0%BE%D1%80%D1%82%D1%80%D0%B5%D1%82-%D0%BA%D1%80%D0%B0%D1%81%D0%B8%D0%B2%D0%BE%D0%B3%D0%BE-%D1%83%D0%BB%D1%8B%D0%B1%D0%B0%D1%8E%D1%89%D0%B5%D0%B3%D0%BE%D1%81%D1%8F-%D0%BC%D0%BE%D0%BB%D0%BE%D0%B4%D0%BE%D0%B3%D0%BE-%D1%87%D0%B5%D0%BB%D0%BE%D0%B2%D0%B5%D0%BA%D0%B0-%D1%81%D0%BE-%D1%81%D0%BA%D1%80%D0%B5%D1%89%D0%B5%D0%BD%D0%BD%D1%8B%D0%BC%D0%B8-%D1%80%D1%83%D0%BA%D0%B0%D0%BC%D0%B8.jpg?s=612x612&w=0&k=20&c=XAmUDQcCbmorrYBQOVADBgkzUX66S7-HSRyEzjwpxZI="-->
+<!--              alt=""-->
+<!--            />-->
+<!--            <h4 class="our-trainers-container-title">-->
+<!--              {{ $t("our-trainers.our-trainer-two") }}-->
+<!--            </h4>-->
+<!--            <p class="our-trainers-container-text">-->
+<!--              {{ $t("our-trainers.our-trainer-description-two") }}-->
+<!--            </p>-->
+<!--          </div>-->
+<!--          <div class="our-trainers-container-background">-->
+<!--            <img-->
+<!--              class="our-trainers-container-img"-->
+<!--              src="https://media.istockphoto.com/id/1200677760/ru/%D1%84%D0%BE%D1%82%D0%BE/%D0%BF%D0%BE%D1%80%D1%82%D1%80%D0%B5%D1%82-%D0%BA%D1%80%D0%B0%D1%81%D0%B8%D0%B2%D0%BE%D0%B3%D0%BE-%D1%83%D0%BB%D1%8B%D0%B1%D0%B0%D1%8E%D1%89%D0%B5%D0%B3%D0%BE%D1%81%D1%8F-%D0%BC%D0%BE%D0%BB%D0%BE%D0%B4%D0%BE%D0%B3%D0%BE-%D1%87%D0%B5%D0%BB%D0%BE%D0%B2%D0%B5%D0%BA%D0%B0-%D1%81%D0%BE-%D1%81%D0%BA%D1%80%D0%B5%D1%89%D0%B5%D0%BD%D0%BD%D1%8B%D0%BC%D0%B8-%D1%80%D1%83%D0%BA%D0%B0%D0%BC%D0%B8.jpg?s=612x612&w=0&k=20&c=XAmUDQcCbmorrYBQOVADBgkzUX66S7-HSRyEzjwpxZI="-->
+<!--              alt=""-->
+<!--            />-->
+<!--            <h4 class="our-trainers-container-title">-->
+<!--              {{ $t("our-trainers.our-trainer-three") }}-->
+<!--            </h4>-->
+<!--            <p class="our-trainers-container-text">-->
+<!--              {{ $t("our-trainers.our-trainer-description-three") }}-->
+<!--            </p>-->
+<!--          </div>-->
+<!--          <div class="our-trainers-container-background">-->
+<!--            <img-->
+<!--              class="our-trainers-container-img"-->
+<!--              src="https://media.istockphoto.com/id/1200677760/ru/%D1%84%D0%BE%D1%82%D0%BE/%D0%BF%D0%BE%D1%80%D1%82%D1%80%D0%B5%D1%82-%D0%BA%D1%80%D0%B0%D1%81%D0%B8%D0%B2%D0%BE%D0%B3%D0%BE-%D1%83%D0%BB%D1%8B%D0%B1%D0%B0%D1%8E%D1%89%D0%B5%D0%B3%D0%BE%D1%81%D1%8F-%D0%BC%D0%BE%D0%BB%D0%BE%D0%B4%D0%BE%D0%B3%D0%BE-%D1%87%D0%B5%D0%BB%D0%BE%D0%B2%D0%B5%D0%BA%D0%B0-%D1%81%D0%BE-%D1%81%D0%BA%D1%80%D0%B5%D1%89%D0%B5%D0%BD%D0%BD%D1%8B%D0%BC%D0%B8-%D1%80%D1%83%D0%BA%D0%B0%D0%BC%D0%B8.jpg?s=612x612&w=0&k=20&c=XAmUDQcCbmorrYBQOVADBgkzUX66S7-HSRyEzjwpxZI="-->
+<!--              alt=""-->
+<!--            />-->
+<!--            <h4 class="our-trainers-container-title">-->
+<!--              {{ $t("our-trainers.our-trainer-four") }}-->
+<!--            </h4>-->
+<!--            <p class="our-trainers-container-text">-->
+<!--              {{ $t("our-trainers.our-trainer-description-four") }}-->
+<!--            </p>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </section>-->
 <Diagnostic id="diagnostics"></Diagnostic>
     </main>
     <footer></footer>
+    <Helper></Helper>
   </div>
 </template>
 <script setup>
@@ -181,6 +182,7 @@ import {
   ElInput,
 } from "element-plus";
 import { ref } from "vue";
+import Helper from "../components/Helper.vue"
 useHead({
   titleTemplate: "Milon - О нас ",
   meta: [
@@ -458,6 +460,9 @@ useHead({
 }
 
 @media screen and (max-width: 768px) {
+  .safety-title{
+    padding-top: 300px;
+  }
   .mar {
     display: block;
     margin: auto;
@@ -466,8 +471,17 @@ useHead({
   .our-trainers-container-background {
     width: 120px;
   }
+  .player-container{
+    width: 80%;
+  }
 }
 @media screen and (max-width: 600px) {
+  .safety-text{
+    padding-bottom: 20px;
+    width: 80%;
+    margin: auto;
+    text-align: justify;
+  }
   .what-can-block-first {
     width: 450px;
   }
@@ -496,15 +510,31 @@ useHead({
   }
 }
 @media screen and (max-width: 500px) {
+  .safety{
+    background: #2c9a93;
+  }
+  .safety-title{
+    font-size: 20px;
+    padding-top:40px;
+    width: 70%;
+    margin: auto;
+    padding-bottom: 10px;
+  }
+  .safety-title-second{
+    font-size: 20px;
+    width: 70%;
+    margin: auto;
+    padding-bottom: 10px;
+  }
+  .our-trainers-container{
+    flex-wrap: wrap;
+  }
   .our-trainers-container-background {
-    width: 110px;
+    width: 180px;
+    margin-left: 2%;
+    margin-right: 2%;
   }
-  .our-trainers-container-title {
-    font-size: 13px;
-  }
-  .our-trainers-container-text {
-    font-size: 8px;
-  }
+
   .features-text {
     padding-bottom: 50px;
     width: 80%;
@@ -513,6 +543,60 @@ useHead({
     font-size: 12px;
     width: 80%;
     margin: auto;
+  }
+  .what-can-block-first{
+    width: 330px;
+    height: 250px;
+  }
+  .what-can-block-second{
+    width: 330px;
+    height: 200px;
+  }
+  .what-can-block-third{
+    width: 330px;
+    height: 350px;
+    margin-bottom: 40px;
+  }
+  .what-can-block-title{
+    font-size: 13px;
+  }
+  .what-can-block-text{
+    font-size: 11px;
+  }
+  .programs-item{
+    width: 300px;
+  }
+}
+@media screen and (max-width: 391px) {
+  .player-container{
+    height: 200px;
+  }
+  .video-player{
+    width: 100%;
+    height: 100%;
+  }
+  .what-can-block-text{
+    line-height: 14px;
+    width: 90%;
+    text-align: justify;
+  }
+  .what-can-block-first{
+    width: 250px;
+  }
+  .what-can-block-second{
+    width: 250px;
+  }
+  .what-can-block-third{
+    width: 250px;
+    height: 370px;
+  }
+  .safety-text{
+    line-height: 16px;
+  }
+  .programs-item{
+    width: 250px;
+    height: 170px;
+    font-size: 18px;
   }
 }
 

@@ -10,7 +10,7 @@
       src="../assets/img/left_green_triangles.png"
       alt=""
     />
-    <h3 class="sistem-title">{{ $t("diagnostics.diagnostics-title") }}</h3>
+    <h3 class="diagnostic-title">{{ $t("diagnostics.diagnostics-title") }}</h3>
     <el-row>
       <el-col :xs="24" :sm="12" :md="12" :lg="12" :xl="12">
         <img class="diagnostics-img" src="../assets/img/girl2.png" alt="" />
@@ -46,7 +46,7 @@
             end="18:30"
             :placeholder="$t('diagnostics.diagnostics-time')"
           />
-          <button @click="submit()" class="lozung-button mar">
+          <button @click="submit()" class="lozung-button-dia">
             {{ $t("lozung-section.lozung-button") }}
           </button>
         </div>
@@ -64,13 +64,14 @@ import {
   ElNotification,
 } from "element-plus";
 import { useFeedbacksStore } from "../store/Feedbacks";
-import { ref} from "vue";
+import { ref } from "vue";
 const store = useFeedbacksStore();
 let name = ref("");
 let phone = ref("");
 let age = ref("");
 let day = ref("");
 let time = ref("");
+const router = useRouter()
 function submit() {
   if (this.name && this.phone && this.age && this.day && this.time) {
     const data = {
@@ -81,29 +82,42 @@ function submit() {
       time: time.value,
     };
     store.postFeedback(data);
+    router.push('/thanks')
     ElNotification({
-        title:"Спасибо за регистрацию!",
-        message:"Наши операторы с Вами свяжутся для подтверждения регистрации и ответов на вопросы. С уважением, MILON Health Club",
-        type:'success',
-      })
-  }else{
+      title: "Спасибо за регистрацию!",
+      message:
+        "Наши операторы с Вами свяжутся для подтверждения регистрации и ответов на вопросы. С уважением, MILON Health Club",
+      type: "success",
+    });
+  } else {
     ElNotification({
-        title: 'Необходимо заполнить все данные!',
-        message:'',
-        type:'error',
-      })
+      title: "Необходимо заполнить все данные!",
+      message: "",
+      type: "error",
+    });
   }
-  phone.value= '',
-  name.value='',
-  age.value='',
-  day.value='',
-  time.value=''
+  (phone.value = ""),
+    (name.value = ""),
+    (age.value = ""),
+    (day.value = ""),
+    (time.value = "");
 }
 </script>
 <style>
 .diagnostics {
   position: relative;
 }
+.diagnostic-title {
+  text-transform: uppercase;
+  color: black;
+  padding-top: 50px;
+  margin: auto;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 800;
+  width: 53%;
+}
+
 .diagnostics-grey {
   position: absolute;
   width: 30%;
@@ -116,6 +130,21 @@ function submit() {
   top: 180px;
   left: 0px;
   z-index: -1;
+}
+.lozung-button-dia {
+  text-transform: uppercase;
+  width: 250px;
+  height: 50px;
+  background: #f1ab1d;
+  color: white;
+  font-size: 20px;
+  border-radius: 14px;
+  margin-top: 40px;
+  margin-left: 10%;
+  transition: 0.5s;
+}
+.lozung-button-dia:hover {
+  background: #f3c165;
 }
 .diagnostics-img {
   margin-left: 20%;
@@ -130,7 +159,7 @@ function submit() {
   display: block;
   width: 60%;
   height: 50px;
-  background: #fafcfb;
+  background: #d6d8d6;
   border: none;
   border-radius: 15px;
   color: #869696;
@@ -139,15 +168,24 @@ function submit() {
   padding: 10px;
   font-size: 18px;
 }
+
+.el-input__inner {
+  color: black;
+}
+.el-input {
+  --el-input-placeholder-color: black;
+}
 .el-date-editor.el-input {
   width: 60%;
+  height: 50px;
 }
 .el-input__wrapper {
-  background-color: #fafcfb;
+  background-color: #d6d8d6;
   box-shadow: none;
 }
-.el-input__inner {
-  color: #869696 !important;
+
+.el-select .el-input__inner {
+  font-size: 17px;
 }
 .el-input__prefix {
   display: none;
@@ -155,7 +193,13 @@ function submit() {
 .el-select.is-focus .el-input.is-focus .el-input__wrapper.is-focus {
   box-shadow: none;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1000px) {
+  .lozung-button-dia {
+    margin-left: 5%;
+  }
+}
+
+@media screen and (max-width: 767px) {
   .diagnostics-img {
     margin: auto;
     width: 40%;
@@ -169,10 +213,21 @@ function submit() {
   .diagnostics-input {
     margin-left: 20%;
   }
+  .lozung-button-dia {
+    display: block;
+    margin: auto;
+    margin-top: 40px;
+  }
 }
 @media screen and (max-width: 500px) {
+  .diagnostic-title {
+    font-size: 18px;
+  }
   .diagnostics-img {
-    padding-bottom: 20px;
+    padding-bottom: 0px;
+  }
+  .lozung-button-dia {
+    width: 180px;
   }
 }
 </style>

@@ -152,7 +152,7 @@
             <img class="news-about-img" src="../assets/img/photo2.png" alt=""
           /></el-col>
         </el-row>
-        <h3 style="margin-left: 15%" class="sistem-title">
+        <h3 class="news-title-two">
           {{ $t("news-about.title-two") }}
         </h3>
         <el-row>
@@ -169,7 +169,7 @@
             </p>
           </el-col>
         </el-row>
-        <h3 style="margin-left: 15%" class="sistem-title">
+        <h3 class="news-title-two">
           {{ $t("news-about.title-three") }}
         </h3>
         <el-row>
@@ -200,7 +200,7 @@
         </p>
       </section>
       <section class="news-video">
-        <h3 class="sistem-title">
+        <h3 class="sistem-title-video">
           {{ $t("challenge.title-video") }}
         </h3>
         <div class="news-container">
@@ -223,6 +223,7 @@
         </div>
       </section>
 <Diagnostic id="diagnostics"></Diagnostic>
+<Helper></Helper>
     </main>
   </div>
 </template>
@@ -239,6 +240,7 @@ import {
 } from "element-plus";
 import { useTimeSlotsStore } from "../store/TimeSlots";
 import Diagnostic from "../components/Diagnostic.vue"
+import Helper from "../components/Helper.vue"
 import { ref, onMounted, getCurrentInstance } from "vue";
 useHead({
   titleTemplate: "Milon - новости",
@@ -316,6 +318,17 @@ onMounted(() => {
 });
 </script>
 <style>
+.news-title-two{
+  text-transform: uppercase;
+  color: black;
+  padding-top: 50px;
+  margin: auto;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 800;
+  width: 53%;
+  margin-left: 15%;
+}
 .news {
   position: relative;
 }
@@ -377,10 +390,10 @@ onMounted(() => {
   display: block;
   width: 25%;
   height: 50px;
-  background: #f9fbfb;
+  background: #d6d8d6;
   border: none;
   border-radius: 15px;
-  color: #869696;
+  color: black;
   font-size: 20px;
   font-weight: 300;
   padding: 10px;
@@ -391,10 +404,10 @@ onMounted(() => {
   display: block;
   width: 25%;
   height: 80px;
-  background: #f9fbfb;
+  background: #d6d8d6;
   border: none;
   border-radius: 15px;
-  color: #869696;
+  color: black;
   font-size: 20px;
   font-weight: 300;
   padding: 10px;
@@ -532,6 +545,16 @@ onMounted(() => {
   display: flex;
   justify-content: center;
 }
+.sistem-title-video{
+  text-transform: uppercase;
+    color: black;
+    padding-top: 50px;
+    margin: auto;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 800;
+    width: 53%;
+}
 .registration-button {
   width: 100px;
   height: 50px;
@@ -600,60 +623,7 @@ onMounted(() => {
   margin-left: 2%;
   margin-right: 2%;
 }
-.diagnostics {
-  position: relative;
-}
-.diagnostics-grey {
-  position: absolute;
-  width: 30%;
-  right: 0px;
-  z-index: -1;
-}
-.diagnostics-green {
-  position: absolute;
-  width: 15%;
-  top: 180px;
-  left: 0px;
-  z-index: -1;
-}
-.diagnostics-img {
-  margin-left: 20%;
-  margin-top: 140px;
-  width: 70%;
-  padding-bottom: 100px;
-}
-.diagnostics-form {
-  margin-top: 140px;
-}
-.diagnostics-input {
-  display: block;
-  width: 60%;
-  height: 50px;
-  background: #fafcfb;
-  border: none;
-  border-radius: 15px;
-  color: #869696;
-  margin-top: 20px;
-  font-size: 22px;
-  padding: 10px;
-  font-size: 18px;
-}
-.el-date-editor.el-input {
-  width: 60%;
-}
-.el-input__wrapper {
-  background-color: #fafcfb;
-  box-shadow: none;
-}
-.el-input__inner {
-  color: #869696 !important;
-}
-.el-input__prefix {
-  display: none;
-}
-.el-select.is-focus .el-input.is-focus .el-input__wrapper.is-focus {
-  box-shadow: none;
-}
+
 @media screen and (min-width: 1800px) {
   .news-title {
     margin-left: 30%;
@@ -750,7 +720,7 @@ onMounted(() => {
     margin-left: 10%;
   }
   .news-about-text-three {
-    width: 70%;
+    width: 80%;
     margin-left: 10%;
   }
   .news-about-img {
@@ -792,6 +762,31 @@ onMounted(() => {
     margin: auto;
   }
 }
+@media screen and (max-width: 767px) {
+  .news-about-text{
+    margin: auto;
+    text-align: justify;
+  }
+  .news-title-two{
+    margin: auto;
+  }
+  .news-about-img-two{
+    margin: auto;
+    margin-top: 30px;
+  }
+  .news-about-text-two{
+    margin: auto;
+    text-align: justify;
+  }
+  .news-about-text-three{
+    margin: auto;
+    text-align: justify;
+  }
+  .news-about-img-three{
+    margin: auto;
+    margin-top: 30px;
+  }
+}
 @media screen and (max-width: 650px) {
   .challenge-text {
     font-size: 13px;
@@ -808,7 +803,12 @@ onMounted(() => {
   }
 }
 @media screen and (max-width: 500px) {
-
+  .news-about-titles{
+    font-size: 20px;
+  }
+  .news-title-two{
+    font-size: 20px;
+  }
   .news-container {
     padding-bottom: 40px;
   }
@@ -842,6 +842,9 @@ onMounted(() => {
     font-size: 12px;
     width: 80%;
     line-height: 15px;
+  }
+  .sistem-title-video{
+    font-size: 18px;
   }
 }
 </style>

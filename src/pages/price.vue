@@ -324,7 +324,7 @@
           src="../assets/img/right_round_elements.png"
           alt=""
         />
-        <h3 class="sistem-title">{{ $t("first-training.title") }}</h3>
+        <h3 class="sistem-title-training">{{ $t("first-training.title") }}</h3>
         <h5 class="first-training-description">
           {{ $t("first-training.description") }}
         </h5>
@@ -359,6 +359,7 @@
         </button>
       </section>
 <Diagnostic id="diagnostics"></Diagnostic>
+<Helper></Helper>
     </main>
   </div>
 </template>
@@ -374,6 +375,7 @@ import {
 } from "element-plus";
 import { ref } from "vue";
 import Diagnostic from "../components/Diagnostic.vue"
+import Helper from "../components/Helper.vue"
 useHead({
   titleTemplate: "Milon - цены",
   meta: [
@@ -391,16 +393,27 @@ let pricesContainer = ref([
   { id: 4, vis: false },
 ]);
 function visiblePrice(el) {
-  for (let i = 0; i < this.pricesContainer.length; i++) {
-    this.pricesContainer[i].vis = false;
+  for (let i = 0; i < pricesContainer.value.length; i++) {
+    pricesContainer.value[i].vis = false;
   }
-  this.pricesContainer[el].vis = true;
+  pricesContainer.value[el].vis = true;
 }
 function notVisiblePrice(el) {
-  this.pricesContainer[el].vis = false;
+  pricesContainer.value[el].vis = false;
 }
 </script>
 <style>
+.sistem-title-training{
+  text-transform: uppercase;
+  color: black;
+  padding-top: 50px;
+  margin: auto;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 800;
+  width: 53%;
+}
+
 .choose-title {
   font-size: 50px;
   text-transform: uppercase;
@@ -640,32 +653,7 @@ function notVisiblePrice(el) {
 .first-training-button:hover {
   background: #9cd7d8;
 }
-.questions {
-  position: relative;
-}
-.questions-round {
-  position: absolute;
-  right: 0px;
-  width: 10%;
-}
-.questions-accordion {
-  width: 45%;
-  margin-top: 80px;
-}
-.el-collapse-item__header {
-  border: none;
-}
-.el-collapse {
-  border: none;
-  --el-collapse-border-color: none;
-}
-.el-collapse-item__header {
-  font-weight: 700;
-}
-.el-collapse-item__header.is-active {
-  font-weight: 700;
-  color: #2e9994;
-}
+
 @media screen and (max-width: 1200px) {
   .choose-img-girl {
     width: 40%;
@@ -737,6 +725,9 @@ function notVisiblePrice(el) {
   .first-training-text {
     font-size: 12px;
     line-height: 18px;
+  }
+  .first-training-text-bold{
+    font-size: 12px;
   }
 }
 
@@ -812,6 +803,88 @@ function notVisiblePrice(el) {
     width: 70%;
     margin: auto;
   }
-
+}
+@media screen and (max-width: 480px) {
+  .sistem-title-training{
+    font-size: 20px;
+  }
+  .first-training-button{
+    display: block;
+    margin: auto;
+    margin-top: 40px;
+  }
+  .description-three{
+    margin-left: 15%;
+  }
+  .description-six{
+   margin-left: 10%;
+  }
+  .description-promotion{
+    margin-left: 10%;
+  }
+  .description-special{
+    margin-left: 5%;
+  }
+}
+@media screen and (max-width: 430px) {
+  .description-promotion{
+    width: 320px;
+    height: 580px;
+  }
+  .description-special{
+    width: 320px;
+    height: 600px;
+  }
+}
+@media screen and (max-width: 395px) {
+  .prices-container-title{
+    font-size: 14px;
+  }
+  .description-title{
+    font-size: 11px;
+  }
+  .description-text{
+    padding-top: 10px;
+  }
+  .description-one{
+    width: 270px;
+    height: 560px;
+    margin: auto;
+    left: 0;
+    right: 0;
+    margin-top: 20px;
+  }
+  .description-three{
+    width: 270px;
+    height: 580px;
+    margin: auto;
+    left: 0;
+    right: 0;
+    margin-top: 140px;
+  }
+  .description-six{
+    width: 270px;
+    height: 500px;
+    margin: auto;
+    left: 0;
+    right: 0;
+    margin-top: 450px;
+  }
+  .description-special{
+    width: 270px;
+    height: 600px;
+    margin: auto;
+    left: 0;
+    right: 0;
+    margin-top: 720px;
+  }
+  .description-promotion{
+    width: 270px;
+    height: 600px;
+    margin: auto;
+    left: 0;
+    right: 0;
+    margin-top: 900px;
+  }
 }
 </style>

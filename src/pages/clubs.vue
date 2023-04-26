@@ -109,7 +109,7 @@
               </p>
             </div>
           </el-col>
-          <el-col :xs="24" :sm="12" :md="12" :lg="12" :xl="12">
+          <el-col :xs="24" :sm="12" :md="12" :lg="8" :xl="8">
             <div class="our-clubs-container-map">
               <iframe
                 class="frame"
@@ -140,7 +140,7 @@
               </p>
             </div>
           </el-col>
-          <el-col :xs="24" :sm="24" :md="24" :lg="12" :xl="12">
+          <el-col :xs="24" :sm="24" :md="24" :lg="8" :xl="8">
             <div class="our-clubs-container-map">
               <iframe
                 class="frame"
@@ -171,9 +171,81 @@
               </p>
             </div>
           </el-col>
+          <el-col :xs="24" :sm="24" :md="24" :lg="8" :xl="8">
+            <div class="our-clubs-container-map">
+              <iframe
+                class="frame"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2995.860504805865!2d69.3751734!3d41.3336466!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38aef5fb26e7cb3b%3A0xc9392d31c8ad0a74!2sMILON%20QORASUV!5e0!3m2!1sen!2sus!4v1682317713372!5m2!1sen!2sus"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+              <div class="address">
+                <img class="address-img" src="../assets/img/geo.jpg" alt="" />
+                <p class="address-text">
+
+                  Qorasuv
+                  Массив Корасу 4, дом 2
+                  Ориентир: ресторан Миллениум, за конечной остановкой
+                </p>
+              </div>
+              <div class="address">
+                <img class="address-img" src="../assets/img/phone.jpg" alt="" />
+                <p>
+                  <a class="address-text" href="tel:+998909839000"
+                    >+998 90 983 90 00  </a
+                  >
+                </p>
+              </div>
+              <p class="address-text">
+                <span class="address-text-color">
+                  {{ $t("our-clubs.orientir") }}</span
+                >
+               Storm
+              </p>
+            </div>
+          </el-col>
+          <el-col :xs="24" :sm="24" :md="24" :lg="8" :xl="8">
+            <div class="our-clubs-container-map">
+              <iframe
+                class="frame"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2996.5204397097446!2d69.23660869999999!3d41.3192951!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae8b7c6b699a0f%3A0x6833fa06c199833c!2sMILON%20QORATOSH!5e0!3m2!1sen!2sus!4v1682317804488!5m2!1sen!2sus"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+              <div class="address">
+                <img class="address-img" src="../assets/img/geo.jpg" alt="" />
+                <p class="address-text">
+                  Qoratosh
+                  Улица Беш-Агач 3Г
+                  Ориентир: рынок Чорсу, магазин Texnomart
+
+                </p>
+              </div>
+              <div class="address">
+                <img class="address-img" src="../assets/img/phone.jpg" alt="" />
+                <p>
+                  <a class="address-text" href="tel:+998909839000
+"
+                    >+998 90 983 90 00</a
+                  >
+                </p>
+              </div>
+              <p class="address-text">
+                <span class="address-text-color">
+                  {{ $t("our-clubs.orientir") }}</span
+                >
+              INBAZAR
+              </p>
+            </div>
+          </el-col>
         </el-row>
       </section>
-<Diagnostic id="diagnostics"></Diagnostic>
+      <Diagnostic id="diagnostics"></Diagnostic>
+      <Helper></Helper>
     </main>
   </div>
 </template>
@@ -188,15 +260,20 @@ import {
   ElInput,
 } from "element-plus";
 import { ref } from "vue";
-import Diagnostic from "../components/Diagnostic.vue"
+import Diagnostic from "../components/Diagnostic.vue";
+import Helper from "../components/Helper.vue";
 useHead({
   titleTemplate: "Клубы Milon",
   meta: [
     { name: "Диагностика", content: "записаться на диагностику" },
     { name: "Milon Oltintepa", content: "Ориентир: Корзинка и кафе Бехруз" },
-    { name: "Milon Bodomzor", content: "Ориентир: супермаркет Азия (боковая сторона парковки), Юнусабадский РОВД" },
+    {
+      name: "Milon Bodomzor",
+      content:
+        "Ориентир: супермаркет Азия (боковая сторона парковки), Юнусабадский РОВД",
+    },
     { name: "Milon RAKAT", content: "Ракат Махалля,Текстильный университет" },
-  ]
+  ],
 });
 </script>
 <style>
@@ -216,7 +293,7 @@ useHead({
   display: flex;
 }
 .frame {
-  width: 300px;
+  width: 270px;
   height: 200px;
 }
 .address {
@@ -251,40 +328,11 @@ useHead({
   margin-top: 40px;
   background: white;
 }
-.our-clubs-container-map .frame {
-  width:270px!important;
-}
 .our-clubs-triangles {
   position: absolute;
   z-index: -1;
   right: 0;
   width: 20%;
-}
-.questions {
-  position: relative;
-}
-.questions-round {
-  position: absolute;
-  right: 0px;
-  width: 10%;
-}
-.questions-accordion {
-  width: 45%;
-  margin-top: 80px;
-}
-.el-collapse-item__header {
-  border: none;
-}
-.el-collapse {
-  border: none;
-  --el-collapse-border-color: none;
-}
-.el-collapse-item__header {
-  font-weight: 700;
-}
-.el-collapse-item__header.is-active {
-  font-weight: 700;
-  color: #2e9994;
 }
 @media screen and (max-width: 1200px) {
   .our-clubs-title {
@@ -305,15 +353,24 @@ useHead({
     width: 470px;
   }
 }
+@media screen and (max-width: 767px) {
+  .frame {
+    width: 100%;
+  }
+  .address-text {
+    width: 100%;
+  }
+}
 @media screen and (max-width: 600px) {
   .our-clubs-container-map {
     width: 400px;
     height: 430px;
   }
-  .frame {
-    width: 390px;
+}
+@media screen and (max-width: 450px) {
+  .our-clubs-container-map {
+    width: 300px;
+    height: 430px;
   }
 }
-
-
 </style>

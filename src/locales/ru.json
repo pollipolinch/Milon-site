@@ -63,7 +63,7 @@
         "diagnostics-sms": "Сообщение",
         "diagnostics-not-title-suc": "Спасибо за регистрацию!",
         "diagnostics-not-message-suc": "Наши операторы с Вами свяжутся для подтверждения регистрации и ответов на вопросы. С уважением, MILON Health Club",
-        "diagnostics-not-title-error":  "Необходимо заполнить все данные!"
+        "diagnostics-not-title-error": "Необходимо заполнить все данные!"
     },
     "questions": {
         "questions-title": "Часто задаваемые вопросы",
@@ -284,7 +284,9 @@
         "month-one": "январь ",
         "month-two": "май ",
         "month-three": "июнь ",
-        "month-four": "ноябрь "
+        "month-four": "ноябрь ",
+        "month-six": "март ",
+        "month-seven": "апрель "
     },
     "pluses-gym": {
         "title": "Преимущество концепции <strong class='test'>35</strong>",
